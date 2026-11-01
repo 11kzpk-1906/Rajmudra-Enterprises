@@ -1,161 +1,46 @@
 # Rajmudra Enterprises
 
-> **IT Hardware • Networking • CCTV • Security & Fire Protection Solutions**
+IT hardware, networking, CCTV surveillance, access control, and fire-alarm solutions for businesses across Mumbai, Thane, and Mira Road.
 
-Rajmudra Enterprises is a technology and security solutions company providing reliable **IT infrastructure, networking, CCTV surveillance, access control, fire alarm systems, and related solutions** for businesses and organizations.
+## Website
 
-## 🌐 Website
+https://www.rajmudraent.com/
 
-**https://www.rajmudraent.com/**
+## Services
 
-## 🚀 Services
+- IT hardware, computers, printers, and peripherals
+- LAN, Wi-Fi, routers, switches, and network installation
+- CCTV/IP cameras, DVR/NVR systems, and remote monitoring
+- Biometric, RFID, door-access, and attendance systems
+- Fire detection and alarm systems
 
-* 🖥️ **IT Hardware Solutions**
+## Technology
 
-  * Computers & laptops
-  * Printers & peripherals
-  * IT accessories
+The website is a static frontend built with HTML, CSS, and JavaScript.
 
-* 🌐 **Networking Solutions**
-
-  * LAN & Wi-Fi infrastructure
-  * Network installation
-  * Routers, switches & connectivity
-
-* 📹 **CCTV & E-Surveillance**
-
-  * CCTV camera installation
-  * Network/IP cameras
-  * DVR/NVR systems
-  * Remote monitoring
-
-* 🔐 **Access Control**
-
-  * Biometric systems
-  * Door access systems
-  * RFID/card-based access
-  * Attendance solutions
-
-* 🔥 **Fire Alarm Systems**
-
-  * Fire detection systems
-  * Alarm panels
-  * Smoke & heat detection
-  * Safety infrastructure
-
-## ✨ Website Features
-
-* Modern responsive design
-* Mobile-friendly interface
-* Service-focused layout
-* Interactive animations
-* Responsive navigation
-* Contact and enquiry sections
-* SEO-friendly structure
-* Optimized business presentation
-
-## 🛠️ Tech Stack
-
-| Technology   | Purpose                     |
-| ------------ | --------------------------- |
-| HTML5        | Website structure           |
-| CSS3         | Styling & responsive design |
-| JavaScript   | Interactivity & animations  |
-| Google Fonts | Typography                  |
-| GitHub       | Version control & hosting   |
-
-## 📁 Project Structure
-
-```text
-Rajmudra-Enterprises/
-│
-├── index.html
-├── style.css
-├── script.js
-├── images/
-│   ├── logo/
-│   ├── services/
-│   └── ...
-│
-└── README.md
-```
-
-## 🎨 Design
-
-The website follows a **modern corporate aesthetic** designed to communicate reliability, technology, and security.
-
-The interface focuses on:
-
-* Clean layouts
-* Professional typography
-* Strong visual hierarchy
-* Responsive design
-* Service-focused content
-* Smooth user interactions
-
-## 📱 Responsive Design
-
-The website is designed to work across:
-
-* 💻 Desktop
-* 🖥️ Laptop
-* 📱 Mobile
-* 📟 Tablet
-
-## 🔧 Local Development
-
-Clone the repository:
+## Run locally
 
 ```bash
-git clone https://github.com/arnavpawar671-ctrl/REPOSITORY-NAME.git
+git clone https://github.com/11kzpk-1906/Rajmudra-Enterprises.git
+cd Rajmudra-Enterprises
 ```
 
-Open the project folder:
+Open `index.html` in a browser, or use VS Code with Live Server.
 
-```bash
-cd REPOSITORY-NAME
-```
+## Main files
 
-Then open `index.html` in a browser.
+- `index.html` — page content and metadata
+- `styles.css` — styling and responsive layout
+- `script.js` — interactive behaviour
+- `robots.txt` and `sitemap.xml` — search engine discovery
+- `CNAME` — custom-domain configuration for GitHub Pages
 
-For development, you can also use **VS Code + Live Server**.
+Images and branding assets are stored at the repository root.
 
-## 🚀 Deployment
+## Before production changes
 
-The website can be deployed using:
+Verify enquiry forms, contact details, accessibility, mobile layouts, analytics consent/privacy requirements, and deployment settings. Never commit private credentials or service-role keys.
 
-* GitHub Pages
-* Netlify
-* Vercel
-* Hostinger
+## Contact
 
-## 📈 Future Improvements
-
-Planned improvements may include:
-
-* [ ] Online enquiry system
-* [ ] Backend database
-* [ ] Admin dashboard
-* [ ] Customer enquiry management
-* [ ] Service quotation system
-* [ ] WhatsApp integration
-* [ ] Google Analytics
-* [ ] Improved SEO
-* [ ] Customer testimonials
-* [ ] Service portfolio/gallery
-
-## 📞 Contact
-
-For business enquiries, services, and technical solutions, visit:
-
-**Rajmudra Enterprises**
-🌐 https://www.rajmudraent.com/
-
----
-
-### © Rajmudra Enterprises
-
-All rights reserved.
-
-
-
+For current contact details and service information, visit the official website.
