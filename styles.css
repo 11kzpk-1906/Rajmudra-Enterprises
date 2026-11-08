@@ -3377,3 +3377,1361 @@ h1, h2, h3, h4,
         transition-duration: .01ms !important;
     }
 }
+
+
+/* =========================================================
+   MOBILE REBUILD — FINAL PHONE-FIRST LAYOUT
+   Deliberately placed last to override conflicting legacy
+   mobile rules without changing the desktop experience.
+   ========================================================= */
+@media (max-width: 760px) {
+    :root {
+        --mobile-gutter: 18px;
+        --mobile-red: #e11d35;
+    }
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+        scroll-padding-top: 78px;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+        font-size: 15px;
+        line-height: 1.65;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    img, svg, video, canvas, iframe {
+        max-width: 100%;
+    }
+
+    .container,
+    .hero-container,
+    .header-inner,
+    .footer-inner {
+        width: auto !important;
+        max-width: 100% !important;
+        margin-left: var(--mobile-gutter) !important;
+        margin-right: var(--mobile-gutter) !important;
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 66px;
+        z-index: 3000;
+        background: rgba(5, 5, 7, .94);
+        border-bottom: 1px solid rgba(255,255,255,.09);
+        box-shadow: 0 8px 28px rgba(0,0,0,.18);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+        min-height: 66px;
+        height: 66px !important;
+        display: flex;
+        align-items: center;
+        gap: 10px !important;
+    }
+
+    .brand {
+        min-width: 0;
+        flex: 1 1 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .brand-symbol,
+    .brand-symbol img {
+        width: 34px !important;
+        height: 34px !important;
+        flex: 0 0 34px;
+        object-fit: contain;
+    }
+
+    .brand-name {
+        font-size: 11px !important;
+        line-height: 1.15;
+        letter-spacing: .12em;
+        white-space: nowrap;
+    }
+
+    .brand-name small {
+        display: block;
+        margin-top: 4px;
+        font-size: 8px;
+        letter-spacing: .23em;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .header-cta {
+        display: inline-flex !important;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        min-height: 38px;
+        margin: 0 !important;
+        padding: 0 11px !important;
+        border: 1px solid rgba(225,29,53,.55);
+        border-radius: 9px;
+        font-size: 10px !important;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .header-cta b {
+        font-size: 13px;
+    }
+
+    .menu-btn {
+        display: inline-flex !important;
+        position: relative;
+        flex: 0 0 40px !important;
+        width: 40px !important;
+        height: 40px !important;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: 10px;
+        background: #101014;
+        z-index: 3002;
+        touch-action: manipulation;
+    }
+
+    .menu-btn span {
+        left: 10px;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+    }
+
+    .menu-btn span:first-child { top: 15px; }
+    .menu-btn span:last-child { top: 22px; }
+
+    .mobile-nav {
+        display: flex !important;
+        position: fixed !important;
+        top: 73px !important;
+        left: var(--mobile-gutter) !important;
+        right: var(--mobile-gutter) !important;
+        width: auto !important;
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        flex-direction: column;
+        gap: 4px !important;
+        padding: 12px !important;
+        border: 1px solid rgba(255,255,255,.13);
+        border-radius: 16px;
+        background: rgba(10,10,13,.985);
+        box-shadow: 0 22px 60px rgba(0,0,0,.65);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-7px);
+        z-index: 3001;
+        transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+    }
+
+    .mobile-nav.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .mobile-nav a {
+        display: flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0 14px;
+        border-radius: 10px;
+        color: #f7f7f9;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        touch-action: manipulation;
+    }
+
+    .mobile-nav a:active,
+    .mobile-nav a:focus-visible {
+        background: rgba(225,29,53,.16);
+        outline: none;
+    }
+
+    .mobile-nav .mobile-nav-cta {
+        justify-content: center;
+        min-height: 48px;
+        margin-top: 6px;
+        background: var(--mobile-red);
+        color: #fff;
+    }
+
+    main {
+        width: 100%;
+        overflow: clip;
+    }
+
+    section,
+    .section {
+        scroll-margin-top: 78px;
+    }
+
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 116px 0 32px !important;
+        display: block !important;
+        overflow: hidden;
+    }
+
+    .hero-background {
+        position: absolute;
+        inset: 0;
+    }
+
+    .hero-image {
+        inset: 0;
+        background-position: 58% center;
+        filter: grayscale(.2) contrast(1.08) brightness(.35);
+        transform: none !important;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(180deg, rgba(5,5,7,.48), rgba(5,5,7,.82) 48%, #050507 100%),
+            linear-gradient(90deg, rgba(5,5,7,.72), rgba(5,5,7,.18));
+    }
+
+    .hero-grid {
+        opacity: .18;
+        background-size: 44px 44px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+    }
+
+    .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        font-size: 10px;
+        line-height: 1.4;
+        letter-spacing: .12em;
+    }
+
+    .hero-title,
+    .hero h1 {
+        max-width: 100%;
+        margin: 0 0 18px;
+        font-size: clamp(2.45rem, 10.2vw, 4.1rem) !important;
+        line-height: .99 !important;
+        letter-spacing: -.055em;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-title br {
+        display: block;
+        content: "";
+        margin-bottom: 5px;
+    }
+
+    .hero-description {
+        max-width: 42ch;
+        margin: 0 0 24px;
+        font-size: 14px !important;
+        line-height: 1.8;
+        color: #d0d0d6;
+    }
+
+    .hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 10px !important;
+        width: 100%;
+        margin: 0 0 22px;
+    }
+
+    .hero-actions .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 49px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .hero-location {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .hero-stats {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        margin-top: 32px;
+    }
+
+    .hero-stats .stat {
+        display: flex;
+        min-width: 0;
+        min-height: 94px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 13px;
+        border: 1px solid rgba(255,255,255,.11);
+        border-radius: 12px;
+        background: rgba(14,14,18,.72);
+        box-shadow: none;
+        backdrop-filter: blur(8px);
+    }
+
+    .stat strong {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+        line-height: 1.1;
+    }
+
+    .stat span {
+        margin-top: 7px;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .hero-bottom {
+        display: none !important;
+    }
+
+    .marquee {
+        overflow: hidden;
+        padding: 15px 0;
+    }
+
+    .marquee-track {
+        gap: 18px;
+        width: max-content;
+    }
+
+    .marquee-track span {
+        font-size: 10px;
+        letter-spacing: .12em;
+    }
+
+    .section,
+    section:not(.hero) {
+        padding-top: 62px;
+        padding-bottom: 62px;
+    }
+
+    .section-intro-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 14px !important;
+        margin-bottom: 28px;
+    }
+
+    .section-number,
+    .small-label {
+        font-size: 10px;
+        letter-spacing: .13em;
+    }
+
+    .section-title {
+        max-width: 100%;
+        margin-top: 12px;
+        font-size: clamp(2rem, 8.5vw, 3.1rem) !important;
+        line-height: 1.06 !important;
+        letter-spacing: -.045em;
+        overflow-wrap: anywhere;
+    }
+
+    .section-description {
+        max-width: 100%;
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .solution-list,
+    .solution-grid,
+    .project-grid,
+    .product-grid,
+    .service-grid,
+    .about-grid,
+    .approach-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .solution-card,
+    .project-card,
+    .product-card,
+    .service-card,
+    .about-card,
+    .contact-card {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        transform: none !important;
+        box-shadow: 0 10px 28px rgba(0,0,0,.22);
+    }
+
+    .solution-card,
+    .project-card,
+    .product-card,
+    .service-card,
+    .about-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .solution-visual,
+    .project-visual,
+    .product-visual,
+    .service-visual,
+    .about-image,
+    .featured-image {
+        width: 100%;
+        min-height: 190px;
+        max-height: 260px;
+        overflow: hidden;
+    }
+
+    .image-placeholder,
+    .solution-visual .image-placeholder {
+        min-height: 190px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .solution-content,
+    .project-content,
+    .product-content,
+    .service-content,
+    .about-content {
+        padding: 20px !important;
+    }
+
+    .solution-content h3,
+    .project-card h3,
+    .product-card h3,
+    .service-card h3,
+    .about-card h3 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+    }
+
+    .solution-content p,
+    .project-card p,
+    .product-card p,
+    .service-card p,
+    .about-card p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .button,
+    button,
+    input,
+    select,
+    textarea {
+        font: inherit;
+    }
+
+    .button,
+    .header-cta,
+    .mobile-nav a,
+    .menu-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .contact-section,
+    #contact {
+        overflow: hidden;
+    }
+
+    .contact-details,
+    .contact-form,
+    .contact-card {
+        min-width: 0;
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        min-width: 0;
+        font-size: 16px !important;
+    }
+
+    .quote-modal,
+    .service-detail-modal,
+    [role="dialog"] {
+        padding: 12px;
+    }
+
+    .quote-modal .modal-content,
+    .quote-modal-content,
+    .service-detail-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100dvh - 24px);
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    footer {
+        padding-bottom: 28px;
+    }
+
+    .footer-inner {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px !important;
+    }
+
+    .footer-inner > * {
+        min-width: 0;
+    }
+
+    .motion-magnetic {
+        transform: none !important;
+    }
+
+    [data-visual-depth],
+    [data-scroll-scale],
+    [data-scroll-rotate] {
+        transform: none !important;
+    }
+
+    .motion-orb,
+    .cursor-ring,
+    .visual-energy-field,
+    .visual-hud,
+    .scroll-cinema-field {
+        display: none !important;
+    }
+
+    .motion-shine::before,
+    .visual-scan {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 390px) {
+    @media (max-width: 760px) {
+        :root { --mobile-gutter: 14px; }
+
+        .header-inner {
+            gap: 7px !important;
+        }
+
+        .brand {
+            gap: 6px;
+        }
+
+        .brand-symbol,
+        .brand-symbol img {
+            width: 30px !important;
+            height: 30px !important;
+            flex-basis: 30px;
+        }
+
+        .brand-name {
+            font-size: 9px !important;
+        }
+
+        .brand-name small {
+            font-size: 7px;
+        }
+
+        .header-cta {
+            padding: 0 8px !important;
+            font-size: 9px !important;
+        }
+
+        .menu-btn {
+            flex-basis: 36px !important;
+            width: 36px !important;
+            height: 38px !important;
+        }
+
+        .hero-title,
+        .hero h1 {
+            font-size: clamp(2.25rem, 10vw, 2.75rem) !important;
+        }
+
+        .section-title {
+            font-size: clamp(1.85rem, 8vw, 2.35rem) !important;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @media (max-width: 760px) {
+        *, *::before, *::after {
+            scroll-behavior: auto !important;
+            animation-duration: .01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: .01ms !important;
+        }
+    }
+}
+
+
+/* MOBILE QA PATCH — use the real footer/contact component names */
+@media (max-width: 760px) {
+    .footer-top {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 14px !important;
+        padding-bottom: 24px;
+    }
+
+    .footer-logo {
+        display: block;
+        width: min(220px, 72vw) !important;
+        max-width: 100%;
+        height: auto !important;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .footer-middle {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px !important;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .footer-column {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-column > span {
+        margin-bottom: 2px;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.75;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding-top: 18px;
+    }
+
+    .footer-bottom > * {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-container,
+    .contact-main {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-title {
+        font-size: clamp(2rem, 8.5vw, 3rem) !important;
+        line-height: 1.08 !important;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .contact-actions .button {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   DEVICE IMAGE RELIABILITY — GALAXY S24 / IPHONE 14 PRO
+   These phones use a CSS viewport around 384–393px wide.
+   Use real img elements as well as the original background
+   layers so photos paint reliably in mobile Safari/Chrome.
+   ========================================================= */
+.hero-image,
+.about-image,
+.image-placeholder,
+.product-art {
+    overflow: hidden;
+    background-color: #17191f;
+}
+
+.hero-image > img,
+.about-image > img,
+.image-placeholder > img,
+.product-art > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    visibility: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    -webkit-transform: none;
+}
+
+.hero-image > img {
+    object-position: 58% center;
+}
+
+.image-placeholder > img,
+.product-art > img {
+    transition: transform .7s ease;
+}
+
+@media (max-width: 760px) {
+    .hero-image,
+    .about-image {
+        inset: 0;
+        min-height: 100%;
+        background-size: cover !important;
+    }
+
+    .hero-image > img {
+        object-position: 58% center;
+    }
+
+    .solution-visual {
+        position: relative;
+        display: block;
+        min-height: 210px;
+        height: clamp(210px, 62vw, 270px);
+        isolation: isolate;
+        background: #17191f;
+    }
+
+    .image-placeholder,
+    .solution-visual .image-placeholder {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .image-placeholder > img {
+        z-index: 0;
+    }
+
+    .solution-visual::after {
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .visual-tag {
+        z-index: 2;
+    }
+
+    .product-card {
+        position: relative;
+        isolation: isolate;
+        min-height: 255px;
+        background: #17191f;
+    }
+
+    .product-art {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .product-art > img {
+        z-index: 0;
+    }
+
+    .product-overlay {
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .product-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* The mobile menu already contains a quote CTA; reclaim header space. */
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    .header-cta {
+        display: none !important;
+    }
+
+    .menu-btn {
+        flex-shrink: 0;
+        min-width: 40px;
+        min-height: 40px;
+        touch-action: manipulation;
+    }
+
+    .mobile-nav {
+        max-height: calc(100dvh - 92px - env(safe-area-inset-top));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-nav a {
+        min-height: 48px;
+    }
+
+    .hero,
+    .section,
+    section:not(.hero) {
+        max-width: 100%;
+    }
+
+    img {
+        -webkit-user-drag: none;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 430px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .hero-title,
+    .hero h1 {
+        font-size: clamp(2.35rem, 9.7vw, 2.85rem) !important;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .solution-visual {
+        height: 235px;
+    }
+
+    .product-card {
+        min-height: 265px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .hero-title,
+    .hero h1 {
+        font-size: clamp(2.1rem, 9.5vw, 2.5rem) !important;
+    }
+
+    .solution-visual {
+        height: 205px;
+    }
+}
+
+@media (max-width: 760px) and (orientation: landscape) {
+    .hero {
+        padding-top: 100px !important;
+    }
+
+    .hero-image {
+        background-position: center 42%;
+    }
+
+    .hero-stats {
+        margin-top: 22px;
+    }
+}
+
+
+/* MOBILE SECTION FIT — prevent individual sections/cards being clipped
+   Target: Galaxy S24 and iPhone 14 Pro portrait + landscape. */
+@media (max-width: 760px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    main,
+    main > section,
+    .hero,
+    .about-section,
+    .contact-section,
+    .projects-showcase {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: clip;
+        box-sizing: border-box;
+    }
+
+    .hero,
+    .about-section,
+    .contact-section {
+        min-height: 0 !important;
+        height: auto !important;
+        display: block !important;
+        padding-top: max(92px, calc(78px + env(safe-area-inset-top))) !important;
+        padding-bottom: 42px !important;
+    }
+
+    .hero-background,
+    .about-background,
+    .contact-background {
+        position: absolute;
+        inset: 0;
+        min-height: 100%;
+        pointer-events: none;
+    }
+
+    .hero-image,
+    .about-image,
+    .contact-image {
+        position: absolute;
+        inset: 0;
+        min-height: 100%;
+        transform: none !important;
+        will-change: auto;
+    }
+
+    .about-container,
+    .contact-container,
+    .hero-content,
+    .container {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-container,
+    .contact-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .about-copy,
+    .contact-main,
+    .contact-content,
+    .section-intro-grid,
+    .section-heading,
+    .section-title,
+    .section-description {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .section,
+    section:not(.hero) {
+        padding-top: 44px !important;
+        padding-bottom: 44px !important;
+    }
+
+    .solution-list,
+    .solution-grid,
+    .project-grid,
+    .product-grid,
+    .service-grid,
+    .about-grid,
+    .approach-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        min-width: 0;
+    }
+
+    .solution-card,
+    .project-card,
+    .product-card,
+    .service-card,
+    .about-card,
+    .contact-card {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .product-large {
+        grid-row: auto !important;
+    }
+
+    .project-art,
+    .product-art,
+    .solution-visual,
+    .service-visual,
+    .featured-image {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .project-copy,
+    .product-content,
+    .solution-content,
+    .service-content,
+    .about-content,
+    .contact-card,
+    .footer-column {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-actions,
+    .contact-actions {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-actions .button,
+    .contact-actions .button {
+        min-width: 0;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-top,
+    .footer-middle,
+    .footer-bottom {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .hero-stats .stat {
+        min-width: 0;
+        padding: 13px 10px;
+    }
+
+    .section-intro-grid {
+        gap: 10px !important;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+    }
+
+    .hero-title,
+    .hero h1 {
+        letter-spacing: -.045em;
+        overflow-wrap: normal;
+    }
+}
+
+@media (max-width: 760px) and (orientation: landscape) {
+    .hero,
+    .about-section,
+    .contact-section {
+        padding-top: 88px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE REFINEMENT — ABOUT / CONTACT / PAYMENTS (UPI)
+   Tuned for Galaxy S24, iPhone 14 Pro and narrow screens.
+   ========================================================= */
+@media (max-width: 760px) {
+    /* About Rajmudra: stack the story and proof points instead
+       of retaining the desktop two-column grid. */
+    #about.about-section {
+        display: block !important;
+        min-height: 0 !important;
+        padding: 58px 0 46px !important;
+    }
+
+    #about .about-container {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px !important;
+        width: 100%;
+        padding: 0;
+    }
+
+    #about .about-copy,
+    #about .about-points {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #about .about-description {
+        max-width: 100%;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.75;
+        overflow-wrap: anywhere;
+    }
+
+    #about .about-copy .button {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 22px;
+        justify-content: center;
+    }
+
+    #about .about-points {
+        margin-top: 2px;
+    }
+
+    #about .about-point {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 12px;
+        padding: 17px 0;
+    }
+
+    #about .about-point strong {
+        font-size: 13px;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    #about .about-point p {
+        font-size: 12px;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+
+    /* Contact: place contact information below the message and
+       make every action easy to tap without horizontal overflow. */
+    #contact.contact-section {
+        display: block !important;
+        min-height: 0 !important;
+        padding: 58px 0 44px !important;
+    }
+
+    #contact .contact-container {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        align-items: stretch;
+        gap: 28px !important;
+        width: 100%;
+        padding: 0;
+    }
+
+    #contact .contact-main,
+    #contact .contact-details {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #contact .contact-title {
+        margin-top: 14px;
+        font-size: clamp(2rem, 8.6vw, 2.8rem) !important;
+        line-height: 1.04 !important;
+        letter-spacing: -.045em;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-title span {
+        display: inline;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-description {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    #contact .contact-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    #contact .contact-actions .button {
+        width: 100%;
+        min-width: 0;
+        min-height: 49px;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-detail {
+        padding: 17px 0;
+    }
+
+    #contact .contact-detail p,
+    #contact .contact-detail a {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.75;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* Payments / UPI: one card per row, less wasted space, and
+       long UPI IDs safely wrap on small phone widths. */
+    #payments.payments-section {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
+    #payments .section-intro-grid {
+        margin-bottom: 0;
+    }
+
+    #payments .payment-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 12px !important;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #payments .payment-card {
+        display: grid !important;
+        grid-template-columns: 26px minmax(0, 1fr) !important;
+        align-items: start;
+        gap: 12px !important;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+        padding: 20px 16px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    #payments .payment-card > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #payments .payment-card h3 {
+        max-width: 100%;
+        margin-top: 10px;
+        font-size: clamp(1.15rem, 5.2vw, 1.5rem) !important;
+        line-height: 1.25 !important;
+        letter-spacing: -.025em;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    #payments .payment-card p {
+        max-width: 100%;
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.75;
+        overflow-wrap: anywhere;
+    }
+
+    #payments .payment-index {
+        padding-top: 3px;
+    }
+}
+
+@media (max-width: 390px) {
+    #about .about-container,
+    #contact .contact-container,
+    #payments .container {
+        width: calc(100% - 28px) !important;
+    }
+
+    #payments .payment-card {
+        grid-template-columns: 22px minmax(0, 1fr) !important;
+        gap: 9px !important;
+        padding: 17px 13px;
+    }
+
+    #payments .payment-card h3 {
+        font-size: clamp(1.05rem, 5vw, 1.3rem) !important;
+    }
+}
