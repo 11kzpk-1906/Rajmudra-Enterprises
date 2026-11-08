@@ -802,13 +802,13 @@ button:focus-visible {
 }
 
 .hero-image {
-    background-image:
-        url("hero-security-bg.jpg");
-
-    filter:
-        grayscale(.3)
-        contrast(1.15)
-        brightness(.46);
+    background:
+        linear-gradient(
+            135deg,
+            var(--red-dark) 0%,
+            var(--red) 55%,
+            var(--red-light) 100%
+        );
 }
 
 .hero-overlay {
