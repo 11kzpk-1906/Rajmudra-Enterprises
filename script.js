@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // Remove it from accessibility tree
         loader.setAttribute("aria-hidden", "true");
 
+        // Trigger hero entrance animation after loader fades.
+        setTimeout(() => {
+            $$(".hero-kicker, .hero-title, .hero-description, .hero-actions, .hero-location")
+                .forEach((el, i) => {
+                    el.style.animationDelay = (i * 90) + "ms";
+                    el.classList.add("hero-entering");
+                });
+        }, 120);
+
         setTimeout(() => {
             loader.style.display = "none";
         }, 800);
@@ -239,13 +248,23 @@ document.addEventListener("DOMContentLoaded", () => {
        REVEAL ANIMATIONS
        ===================================================== */
 
+    // Stagger index for grid-based reveal delays.
+    let staggerIndex = 0;
+
     if (
         reducedMotion ||
         !("IntersectionObserver" in window)
     ) {
 
-        revealElements.forEach(element => {
+        revealElements.forEach((element, i) => {
             element.classList.add("visible");
+
+            element.classList.add("is-visible");
+
+            element.style.setProperty(
+                "--reveal-delay",
+                Math.min(i * 60, 360) + "ms"
+            );
         });
 
     } else {
@@ -264,6 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             "visible"
                         );
 
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
                         observer.unobserve(
                             entry.target
                         );
@@ -272,15 +295,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 },
                 {
-                    threshold: 0.12,
+                    threshold: 0.1,
                     rootMargin:
-                        "0px 0px -50px 0px"
+                        "0px 0px -8% 0px"
                 }
             );
 
 
-        revealElements.forEach(element => {
+        revealElements.forEach((element, i) => {
+
+            element.style.setProperty(
+                "--reveal-delay",
+                Math.min(i * 60, 360) + "ms"
+            );
+
             revealObserver.observe(element);
+
         });
 
     }
