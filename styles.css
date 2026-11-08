@@ -2233,6 +2233,134 @@ button:focus-visible {
 
 
 /* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+.testimonials-section {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.testimonial-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 24px;
+
+    margin-top: 70px;
+}
+
+.testimonial-card {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 32px 28px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    transition:
+        transform var(--duration-base) var(--ease),
+        box-shadow var(--duration-base) ease,
+        border-color var(--duration-base) ease;
+}
+
+.testimonial-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-lg);
+
+    border-color:
+        var(--border-light);
+}
+
+.testimonial-quote {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+.quote-mark {
+    color: var(--red);
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius:
+        var(--radius-full);
+
+    background:
+        var(--red);
+
+    color: var(--white);
+
+    font-family: var(--font-display);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.testimonial-author {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+.testimonial-author strong {
+    display: block;
+
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.testimonial-author span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
    CONTACT
    ========================================================= */
 
