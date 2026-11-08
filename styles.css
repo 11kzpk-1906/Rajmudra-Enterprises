@@ -803,7 +803,7 @@ button:focus-visible {
 
 .hero-image {
     background-image:
-        url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=2400&q=85");
+        url("hero-security-bg.jpg");
 
     filter:
         grayscale(.3)
@@ -1393,17 +1393,17 @@ button:focus-visible {
 
 .hardware-image {
     background-image:
-        url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=85");
+        url("it-hardware.jpg");
 }
 
 .cctv-image {
     background-image:
-        url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=85");
+        url("cctv.jpg");
 }
 
 .security-image {
     background-image:
-        url("https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1600&q=85");
+        url("access-fire-system.jpg");
 }
 
 .solution-visual::after {
@@ -1717,7 +1717,7 @@ button:focus-visible {
 
 .about-image {
     background-image:
-        url("https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=2400&q=85");
+        url("control-room.jpg");
 
     filter:
         grayscale(.65)
@@ -1894,17 +1894,17 @@ button:focus-visible {
 
 .product-server {
     background-image:
-        url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=85");
+        url("it-hardware.jpg");
 }
 
 .product-computing {
     background-image:
-        url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1600&q=85");
+        url("hero-it.jpg");
 }
 
 .product-surveillance {
     background-image:
-        url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=85");
+        url("cctv.jpg");
 }
 
 .product-overlay {
@@ -2432,7 +2432,7 @@ button:focus-visible {
 
 .contact-image {
     background-image:
-        url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=2400&q=85");
+        url("control-room.jpg");
 
     filter:
         grayscale(.75)
